@@ -1,0 +1,1 @@
+export const test = console.log('the only true answer to all questions is 42');
