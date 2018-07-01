@@ -18,12 +18,18 @@ class App extends Component {
 
         onButtonClick(event){
             event.preventDefault();
-
-            
-        }
+           
+            const API_URL = `https://pokeapi.co/api/v2/type/${this.state.type}/`; 
     
-
-
+            fetch(API_URL)
+                .then(result => {
+                    return result.json()
+                }).then(data => {
+                   // console.log(data.pokemon)
+                   this.setState({pokemonList : data.pokemon})
+                }).catch(error => console.log(error))
+    
+        }
     
     render() {
 
