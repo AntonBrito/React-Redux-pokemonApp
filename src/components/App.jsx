@@ -6,12 +6,8 @@ class App extends Component {
         super();
 
         this.state = {
-            message: 'hello react course',
-            date: 'June. 28 2018',
-            number: 5,
-            arrayList : [],
-            anObjecetInState : {
-                name: 'iam an object on state of app'
+            type: '1',
+            pokemonList : []
             }
         }
     }
