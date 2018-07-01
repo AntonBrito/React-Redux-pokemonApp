@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import PokemonList from './PokemonList';
+
 
 class App extends Component {
     constructor() {
@@ -54,14 +56,14 @@ class App extends Component {
                             </select>
 
                             <button 
-                                onCLick={this.onButtonClick.bind(this)}
+                                onClick={this.onButtonClick.bind(this)}
                                 className="btn btn-success">Search for type!</button>
 
                         </form>
             
                 </div>
 
-                 <PokemonList />
+                 <PokemonList pokemonResult={this.state.pokemonList}/>
 
             </div>
         );

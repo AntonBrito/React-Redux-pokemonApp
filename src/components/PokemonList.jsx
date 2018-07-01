@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Pokemon from './Pokemon';
+
 class PokemonList extends Component {
     constructor() {
         super()
@@ -20,7 +22,7 @@ class PokemonList extends Component {
     
     //-------------
 
-    
+
     render(){
         // console.log(this.props)
         if ( this.props.pokemonResult.length > 0) {
