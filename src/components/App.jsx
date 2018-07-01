@@ -10,9 +10,22 @@ class App extends Component {
             pokemonList : []
             }
         }
-    }
 
-    render(){
+        onSelectTypeChange(event){
+            // console.log(event.target.value)
+            this.setState( { type: event.target.value} )
+        }
+
+        onButtonClick(event){
+            event.preventDefault();
+
+            
+        }
+    
+
+
+    
+    render() {
 
         console.log('this is the app state', this.state)
         
@@ -24,17 +37,25 @@ class App extends Component {
                     <h4>Our small pokeman app</h4>
                         <form>
                             <label>Choose your Pokemon type</label>
-                            <select >
+                            <br/>
+                            <select 
+                                onChange={this.onSelectTypeChange.bind(this)}       
+                            >
                                 <option value="1">normal</option>
                                 <option value="2">fighting</option>
                                 <option value="3">flying</option>
+                                <option value="4">poison</option>
                             </select>
-                            <button className="btn btn-success">Search for type!</button>
+
+                            <button 
+                                onCLick={this.onButtonClick.bind(this)}
+                                className="btn btn-success">Search for type!</button>
 
                         </form>
-
             
                 </div>
+
+                 <PokemonList />
 
             </div>
         );
