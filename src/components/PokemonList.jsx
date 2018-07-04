@@ -14,9 +14,9 @@ class PokemonList extends Component {
             console.log(pokemons);
             counter = counter +1;
 
-            return <li key={counter}className="card">name: {pokemons.pokemon.name} <br/> url: {pokemons.pokemon.url}</li>
+            // return <li key={counter}className="card">name: {pokemons.pokemon.name} <br/> url: {pokemons.pokemon.url}</li>
+            return <Pokemon key={counter} url={pokemons.pokemon.url} name={pokemons.pokemon.name}/>
 
-            // return <Pokemon key={counter} count{counter}/>
         })
     }
     
