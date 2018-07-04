@@ -40,7 +40,7 @@ class Pokemon extends Component {
             </li>
         )
     }
-    elose if(this.state.showValues){
+    else if(this.state.showValues){
         return (
             <li className="card">
                 <div className="row">
@@ -53,11 +53,12 @@ class Pokemon extends Component {
                         <img src={this.state.imageURL} />
                     </div>
                 </div>
-            
-            
             </li>
 
         );
+    }
+    else {
+        return(<div>adind...</div>)
     }
   }
 }
