@@ -20,6 +20,7 @@ class Pokemon extends Component {
                 return result.json()
             }).then(data => {
             this.setState({
+                showValues : true,
                 height : data.height,
                 weight : data.weight,
                 imageURL : data.sprites.front_default
@@ -30,9 +31,7 @@ class Pokemon extends Component {
     
     render() {
 
-        console.log(this.state)
-
-
+        if(!this.state.showValues){
         return (
             <li 
             onClick={this.onPokemonClick.bind(this)}
@@ -41,6 +40,26 @@ class Pokemon extends Component {
             </li>
         )
     }
+    elose if(this.state.showValues){
+        return (
+            <li className="card">
+                <div className="row">
+                    <div className="col-6">
+                        <p>name: {this.props.name}</p>
+                        <p>height: {this.state.height}</p>
+                        <p>weight: {this.state.weight}</p>
+                    </div>
+                    <div className="col-6">
+                        <img src={this.state.imageURL} />
+                    </div>
+                </div>
+            
+            
+            </li>
+
+        );
+    }
+  }
 }
 
 export default Pokemon;
