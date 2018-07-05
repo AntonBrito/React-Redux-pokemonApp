@@ -42,7 +42,9 @@ class Pokemon extends Component {
     }
     else if(this.state.showValues){
         return (
-            <li className="card">
+            <li 
+            // onClick={this.onCloseTile.bind(this)}
+            className="card">
                 <div className="row">
                     <div className="col-6">
                         <p>name: {this.props.name}</p>
@@ -58,7 +60,7 @@ class Pokemon extends Component {
         );
     }
     else {
-        return(<div>adind...</div>)
+        return(<div>Loadind...</div>)
     }
   }
 }
